@@ -1,0 +1,133 @@
+@import './base.css';
+/* stylelint-disable-next-line at-rule-no-unknown */
+@tailwind base;
+/* stylelint-disable-next-line at-rule-no-unknown */
+@tailwind components;
+/* stylelint-disable-next-line at-rule-no-unknown */
+@tailwind utilities;
+
+
+@layer base {
+    body {
+        @apply font-sans;
+    }
+}
+
+@layer components {
+    .border-bottom {
+        @apply w-full border-b border-gray-200;
+    }
+    h3 {
+        @apply text-lg;
+    }
+}
+
+#app {
+    width: 100%;
+    display: flex;
+    font-weight: normal;
+}
+
+a {
+  text-decoration: none;
+  /* color: hsla(160, 100%, 37%, 1); */
+  transition: 0.4s;
+  padding: 3px;
+}
+
+
+@media (max-width: 700px) {
+    h3 {
+        @apply text-sm;
+    }
+    p, span, .router-link {
+        @apply text-xs;
+    }
+
+    .custom-spacing-top-bottom{
+        @apply pt-2 pb-2;
+    }
+
+    .custom-spacing-left-right{
+        @apply pl-5 pr-5;
+    }
+
+    .custome-gap{
+        @apply gap-2;
+    }
+}
+
+@media (min-width: 701px) and (max-width: 1400px) {
+    h3 {
+        @apply text-base;
+    }
+    p, span, .router-link {
+        @apply text-sm;
+    }
+
+    .custom-spacing-top-bottom{
+        @apply pt-2 pb-2;
+    }
+
+    .custom-spacing-left-right{
+        @apply pl-6 pr-6;
+    }
+
+    .custome-gap{
+        @apply gap-3;
+    }
+}
+
+@media (min-width: 1400px) and (max-width: 1920px) {
+    h3 {
+        @apply text-xl;
+    }
+    p, span, .router-link {
+        @apply text-lg;
+    }
+
+    .custom-spacing-top-bottom{
+        @apply pt-4 pb-4;
+    }
+
+    .custom-spacing-left-right{
+        @apply pl-7 pr-7;
+    }
+
+    .custome-gap{
+        @apply gap-4;
+    }
+}
+
+@media (min-width: 1920px) {
+    h3 {
+        @apply text-2xl;
+    }
+    p, span, .router-link {
+        @apply text-xl;
+    }
+
+    .custom-spacing-top-bottom{
+        @apply pt-6 pb-6;
+    }
+
+    
+    .custom-spacing-left-right{
+        @apply pl-12 pr-12;
+        /* max-width: 1280px; */
+    }
+
+    .custome-gap{
+        @apply gap-5;
+    }
+}
+
+/* @media (min-width: 1280px) {
+
+  #app {
+    display: flex;
+    border-left: 1px solid var(--color-border);
+    border-right: 1px solid var(--color-border);
+
+  }
+} */
